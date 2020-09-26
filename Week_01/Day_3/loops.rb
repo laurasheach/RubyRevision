@@ -41,3 +41,19 @@ chickens = [
 for chicken in chickens
   p "#{chicken[:name]} is #{chicken[:age]}"
 end
+
+total_eggs = 0
+
+for chicken in chickens
+  total_eggs += chicken[:eggs]
+  chicken[:eggs] = 0
+end
+
+p total_eggs.to_s + " eggs collected!"
+p chickens
+
+for chicken in chickens
+  if chicken[:eggs] > 0
+    p "wooo eggs!"
+  end
+end
